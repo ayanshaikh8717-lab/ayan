@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kissan — Taste from the Farm</title>
+  <meta name="description" content="Kissan - Tomato Ketchup, Jams, Squash & more. Fresh farm-sourced goodness.">
+  <style>
+    /* Simple modern CSS - replace with your preferred framework if desired */
+    :root{
+      --accent:#d82b25; /* ketchup red */
+      --accent-dark:#b11b16;
+      --muted:#6b6b6b;
+      --bg:#f9fafb;
+      --container:1100px;
+      --radius:14px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color:#111;
+      background:var(--bg);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+    .wrap{max-width:var(--container);margin:0 auto;padding:28px;}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0;}
+    .brand{display:flex;gap:12px;align-items:center;text-decoration:none;color:inherit}
+    .brand img{height:46px;width:46px;object-fit:contain;border-radius:8px}
+    .nav{display:flex;gap:12px;align-items:center}
+    .nav a{padding:10px 12px;border-radius:10px;text-decoration:none;color:var(--muted);font-weight:600}
+    .nav a.cta{background:var(--accent);color:#fff}
+    /* Hero */
+    .hero{
+      background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.6)), url('assets/hero-placeholder.jpg') center/cover no-repeat;
+      border-radius:var(--radius);
+      padding:56px;
+      display:grid;
+      grid-template-columns:1fr 440px;
+      gap:28px;
+      align-items:center;
+      box-shadow:0 8px 28px rgba(12,12,12,0.08);
+      margin-bottom:26px;
+    }
+    .hero h1{font-size:2.4rem;margin:0 0 12px;color:var(--accent-dark)}
+    .hero p{margin:0 0 18px;color:var(--muted);font-size:1.05rem}
+    .btn-row{display:flex;gap:12px}
+    .btn{
+      display:inline-flex;align-items:center;gap:8px;padding:12px 16px;border-radius:10px;font-weight:700;text-decoration:none;
+      background:var(--accent);color:#fff;
+      box-shadow:0 6px 14px rgba(216,43,37,0.18);
+    }
+    .btn.secondary{background:transparent;border:2px solid rgba(0,0,0,0.06);color:#111;font-weight:600}
+    /* Product cards */
+    .products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:8px}
+    .card{background:#fff;border-radius:12px;padding:14px;box-shadow:0 6px 18px rgba(12,12,12,0.06);display:flex;flex-direction:column;gap:12px}
+    .card img{height:120px;object-fit:contain;border-radius:8px;background:#fff;padding:8px}
+    .card h3{margin:0;font-size:1.02rem}
+    .card p{margin:0;color:var(--muted);font-size:0.95rem}
+    .badge{display:inline-block;background:linear-gradient(90deg,var(--accent),var(--accent-dark));color:#fff;padding:6px 10px;border-radius:999px;font-weight:700;font-size:0.85rem}
+    /* Features */
+    .features{display:flex;gap:14px;margin-top:22px;flex-wrap:wrap}
+    .feature{flex:1;min-width:200px;background:#fff;padding:14px;border-radius:10px;box-shadow:0 6px 18px rgba(12,12,12,0.04)}
+    .feature h4{margin:0 0 6px}
+    .feature p{margin:0;color:var(--muted);font-size:0.95rem}
+    /* carousel */
+    .carousel{position:relative;border-radius:12px;overflow:hidden}
+    .slides{display:flex;transition:transform .45s cubic-bezier(.2,.9,.2,1)}
+    .slide{min-width:100%;padding:20px;background:#fff;display:flex;gap:18px;align-items:center}
+    .slide img{width:220px;height:140px;object-fit:cover;border-radius:10px}
+    .carousel .dots{position:absolute;left:50%;transform:translateX(-50%);bottom:10px;display:flex;gap:8px}
+    .dot{width:10px;height:10px;border-radius:999px;background:rgba(0,0,0,0.18)}
+    .dot.active{background:var(--accent)}
+    /* footer */
+    footer{margin-top:28px;padding:18px 0;color:var(--muted);font-size:0.95rem}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    @media (max-width:940px){
+      .hero{grid-template-columns:1fr; padding:28px}
+      .grid-3{grid-template-columns:1fr}
+      .nav{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="#">
+        <img src="C:\Users\ayans\Desktop\aa\2341289.avif" alt="Kissan logo">
+        <div>
+          <strong>Kissan</strong><br>
+          <small style="color:var(--muted)">Taste from the farm</small>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#products">Products</a>
+        <a href="#recipes">Recipes</a>
+        <a href="#about">About</a>
+        <a class="cta" href="#where-to-buy">Where to buy</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" role="region" aria-label="Kissan hero">
+      <div>
+        <span class="badge">100% farm grown</span>
+        <h1>Real fruit. Real flavour. Family favourites.</h1>
+        <p>From tomatoes to mangoes, Kissan brings the taste of sun-ripened farms to your table. Explore our range of ketchups, jams and more.</p>
+        <div class="btn-row">
+          <a class="btn" href="#products">Shop products</a>
+          <a class="btn secondary" href="#about">Our story</a>
+        </div>
+
+        <!-- quick product previews -->
+        <div style="margin-top:18px">
+          <div class="products" aria-hidden="false">
+            <article class="card">
+              <img src="C:\Users\ayans\Desktop\aa\download.jpeg" alt="Tomato ketchup">
+              <div>
+                <h3>Tomato Ketchup</h3>
+                <p>Rich, tangy and made from real tomatoes.</p>
+              </div>
+            </article>
+
+            <article class="card">
+              <img src="C:\Users\ayans\Desktop\aa\images.jpeg" alt="Fruit jam">
+              <div>
+                <h3>Fruit Jam</h3>
+                <p>Made from handpicked fruits and traditional recipes.</p>
+              </div>
+            </article>
+
+            <article class="card">
+              <img src="C:\Users\ayans\Desktop\aa\93422146.avif" alt="Squash">
+              <div>
+                <h3>Fruit Squash</h3>
+                <p>Concentrated fruit goodness for family drinks.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <!-- Carousel / visual -->
+        <div class="carousel" aria-roledescription="carousel" aria-label="Product highlights">
+          <div class="slides" id="slides" style="transform:translateX(0%)">
+            <div class="slide" aria-hidden="false">
+              <img src="C:\Users\ayans\Desktop\aa\download.jpeg" alt="Ketchup bottle on table">
+              <div>
+                <h3>Classic Tomato Ketchup</h3>
+                <p class="muted">A family favourite since generations.</p>
+              </div>
+            </div>
+            <div class="slide" aria-hidden="true">
+              <img src="C:\Users\ayans\Desktop\aa\c7ea0c93699933.5e6b325887745.jpg" alt="Jams and bread">
+              <div><h3>Breakfast Jams</h3><p class="muted">Spread the joy every morning.</p></div>
+            </div>
+            <div class="slide" aria-hidden="true">
+              <img src="C:\Users\ayans\Desktop\aa\OIP.jpg" alt="Refreshing squash">
+              <div><h3>Refreshing Squash</h3><p class="muted">Perfect for summer afternoons.</p></div>
+            </div>
+          </div>
+
+          <div class="dots" id="dots" aria-hidden="false" role="tablist">
+            <button class="dot active" aria-label="Slide 1" data-index="0"></button>
+            <button class="dot" aria-label="Slide 2" data-index="1"></button>
+            <button class="dot" aria-label="Slide 3" data-index="2"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features" id="about" aria-label="Why Kissan">
+      <div class="feature">
+        <h4>Farm-sourced ingredients</h4>
+        <p>We partner with small farmers across India to source the best fruits and vegetables.</p>
+      </div>
+      <div class="feature">
+        <h4>Quality & Safety</h4>
+        <p>Strict quality checks across supply chain and modern processing for freshness.</p>
+      </div>
+      <div class="feature">
+        <h4>Sustainable practices</h4>
+        <p>Supporting farmers and sustainable agriculture practices for a better future.</p>
+      </div>
+    </section>
+
+    <!-- RECIPES / USES -->
+    <section style="margin-top:22px">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+        <h2 id="recipes">Quick recipes & ideas</h2>
+        <a href="#" class="btn secondary" style="font-size:0.95rem">See more recipes</a>
+      </div>
+
+      <div class="grid-3" style="margin-top:12px">
+        <article class="card">
+          <img src="C:\Users\ayans\Desktop\aa\Ketchup-On-Eggs-scaled.jpg" alt="Egg omelette with ketchup">
+          <h3>Spicy Ketchup Omelette</h3>
+          <p>Make a fluffy omelette and finish with a swirl of Kissan ketchup & herbs.</p>
+        </article>
+        <article class="card">
+          <img src="C:\Users\ayans\Desktop\aa\social media post for kissan jam advertisement.jpg" alt="Jam on toast">
+          <h3>Fruit Jam Toast</h3>
+          <p>Toast, butter and a generous spread of our mango jam — breakfast done right.</p>
+        </article>
+        <article class="card">
+          <img src="C:\Users\ayans\Desktop\aa\40019254_6-kissan-squash-mixed-fruit.webp" alt="Refreshment with squash">
+          <h3>Summer Fruit Cooler</h3>
+          <p>Mix a spoon of squash in chilled water, add lime and mint for a refreshing drink.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="grid-3">
+        <div>
+          <strong>About Kissan</strong>
+          <p style="margin-top:8px;color:var(--muted)">Bringing farm-fresh goodness to families across India for decades.</p>
+        </div>
+        <div>
+          <strong>Contact</strong>
+          <p style="margin-top:8px;color:var(--muted)">consumer.care@kissan.in<br>+91 12345 67890</p>
+        </div>
+        <div>
+          <strong>Follow</strong>
+          <p style="margin-top:8px;color:var(--muted)">Facebook · Instagram · YouTube</p>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:14px;color:var(--muted)">
+        © <span id="year"></span> Kissan — All rights reserved.
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // small interactive bits: carousel + year
+    (function(){
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      const slidesEl = document.getElementById('slides');
+      const dots = Array.from(document.querySelectorAll('.dot'));
+      let idx = 0;
+      function go(i){
+        idx = (i + dots.length) % dots.length;
+        slidesEl.style.transform = 'translateX(' + (-100 * idx) + '%)';
+        dots.forEach((d,di)=> d.classList.toggle('active', di===idx));
+        // accessibility: set aria-hidden for slides
+        const slideEls = slidesEl.querySelectorAll('.slide');
+        slideEls.forEach((s,si) => s.setAttribute('aria-hidden', si!==idx));
+      }
+      dots.forEach(d=> d.addEventListener('click', ()=> go(Number(d.dataset.index))));
+      // auto rotate
+      let t = setInterval(()=> go(idx+1), 4500);
+      // pause on hover
+      const carousel = document.querySelector('.carousel');
+      carousel.addEventListener('mouseenter', ()=> clearInterval(t));
+      carousel.addEventListener('mouseleave', ()=> t = setInterval(()=> go(idx+1), 4500));
+    })();
+  </script>
+</body>
+</html>
